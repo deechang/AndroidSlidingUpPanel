@@ -11,8 +11,18 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 17
+        // changed to 26 due to: Interstitial Admob ads: “IllegalStateException: Only fullscreen activities can request orientation”
+        // https://stackoverflow.com/questions/46992843/interstitial-admob-ads-illegalstateexception-only-fullscreen-activities-can-r
+        targetSdkVersion 28
+        versionCode 1
+        versionName "3.4.1"
+    }
+
     lintOptions {
         abortOnError false
     }
